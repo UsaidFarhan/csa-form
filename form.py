@@ -7,7 +7,7 @@ import ast
 from docx import Document
 
 # Gemini API key (replace this with your key securely in production!)
-GEMINI_API_KEY = ""  # Add your API key here
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", "")
 
 # Gemini API endpoint
 GEMINI_MODEL_NAME = "models/gemini-1.5-flash-001"  # Flash model
