@@ -10,7 +10,7 @@ from docx import Document
 GEMINI_API_KEY = st.secrets["API-KEY"]
 
 # Gemini API endpoint
-GEMINI_MODEL_NAME = "models/gemini-1.5-flash"  # Flash model
+GEMINI_MODEL_NAME = "models/gemini-1.5-flash-002"  # Flash model
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1/{GEMINI_MODEL_NAME}:generateContent"
 
 # Function to call Gemini API
