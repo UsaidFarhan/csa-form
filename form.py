@@ -93,7 +93,7 @@ You are a legal contract summarizer. Extract the following information from the 
 
 For each field, return:
 - The exact text from the contract, if it exists.
-- The value null (without quotes) if the field is not present.
+- The value N/A (without quotes) if the field is not present.
 
 Return the result strictly as JSON, starting with '{{' and ending with '}}'. No explanations, no code blocks, no markdown. The field names must exactly match the list below.
 
@@ -164,3 +164,4 @@ if 'extracted_dict' in st.session_state:
             st.success("CSA Form generated successfully!")
         except Exception as e:
             st.error(f"Error generating CSA form: {e}")
+
