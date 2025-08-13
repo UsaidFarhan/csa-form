@@ -104,6 +104,7 @@ Fields to extract:
 - Principal Contract Ref / Title (if applicable): The reference or title of the main/principal contract, if mentioned.
 - Brief Scope of Service/Supply: A short description of the services or goods provided.
 - Date of Contract: The date when the contract was signed or agreed upon.
+- Backdated: Indicate "Yes" if the contract is backdated, "No" if it is not, or N/A if not mentioned.
 - Effective Date: The date when the contract terms start to apply.
 - Commencement Date of Supply/Service (if different from Effective Date): The start date of actual supply or service, if different from the Effective Date.
 - Term or Duration of Service/Supply: The length or duration of the contract.
@@ -171,5 +172,6 @@ if 'extracted_dict' in st.session_state:
             st.success("CSA Form generated successfully!")
         except Exception as e:
             st.error(f"Error generating CSA form: {e}")
+
 
 
