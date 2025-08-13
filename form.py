@@ -101,18 +101,25 @@ Fields to extract:
 - Supplier Name: The name of the supplier company.
 - Contract Title: The title or subject of the contract.
 - Contract Type: Choose exactly one of the following options — "New", "Renewal", or "Addendum". Return exactly one of these options in the output. Do not return any other text.
+- Principal Contract Ref / Title (if applicable): The reference or title of the main/principal contract, if mentioned.
 - Brief Scope of Service/Supply: A short description of the services or goods provided.
-- Contract Value: The total value or price in the contract.
-- Payment Terms: Any details about payment structure or schedule.
-- Delivery Timelines: Dates or timeframes for delivery.
-- Warranty Details: Details of any warranty provided.
-- Payment Currency: The currency used for payment (e.g., USD, PKR).
-- Penalties: Any penalties or charges mentioned for delays or non-performance.
 - Date of Contract: The date when the contract was signed or agreed upon.
 - Effective Date: The date when the contract terms start to apply.
 - Commencement Date of Supply/Service (if different from Effective Date): The start date of actual supply or service, if different from the Effective Date.
 - Term or Duration of Service/Supply: The length or duration of the contract.
+- Expiry Date of Contract: The date the contract ends or expires.
+- Purchase Order Reference No. (if already issued): The PO number if stated in the contract.
 - Notice Period for Termination: The period required to give notice before terminating the contract.
+- Contract Value: The total value or price in the contract.
+- Delivery Timelines: Dates or timeframes for delivery.
+- Payment Terms: Any details about payment structure or schedule.
+- Payment Currency: The currency used for payment (e.g., USD, PKR).
+- Applicable Taxes: Any taxes mentioned (e.g., VAT, GST).
+- Advance Payment (yes/no) and Amount: Whether an advance payment is required and the amount.
+- Security, Bond or Guarantee details if applicable: Any security deposit, performance bond, or guarantee mentioned.
+- Warranty Details: Details of any warranty provided.
+- Penalties: Any penalties or charges mentioned for delays or non-performance.
+- Liquidated Damages clause (yes/no): Whether a liquidated damages clause is included.
 
 Contract text:
 {contract_text}
@@ -164,4 +171,5 @@ if 'extracted_dict' in st.session_state:
             st.success("CSA Form generated successfully!")
         except Exception as e:
             st.error(f"Error generating CSA form: {e}")
+
 
