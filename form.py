@@ -102,7 +102,7 @@ Fields to extract:
 - Contract Title: The title or subject of the contract.
 - Contract Type: Choose exactly one of the following options — "New", "Renewal", or "Addendum". Return exactly one of these options in the output. Do not return any other text.
 - Principal Contract Ref / Title (if applicable): The reference or title of the main/principal contract, if mentioned.
-- Brief Scope of Service/Supply: A short description of the services or goods provided.
+- Brief Scope of Service/Supply: Provide a concise, professional summary of the services or goods provided, written in clear legal/contract language. Do not copy text verbatim if it is too long or informal — rephrase into a clean human-readable statement.
 - Date of Contract: The date when the contract was signed or agreed upon.
 - Backdated: Indicate "Yes" if the contract is backdated, "No" if it is not, or N/A if not mentioned.
 - Effective Date: The date when the contract terms start to apply.
@@ -172,6 +172,7 @@ if 'extracted_dict' in st.session_state:
             st.success("CSA Form generated successfully!")
         except Exception as e:
             st.error(f"Error generating CSA form: {e}")
+
 
 
 
