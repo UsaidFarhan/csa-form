@@ -122,6 +122,12 @@ Fields to extract:
 - Penalties: Any penalties or charges mentioned for delays or non-performance.
 - Liquidated Damages clause (yes/no): Whether a liquidated damages clause is included.
 
+
+Return ONLY valid JSON. Do not include explanations, comments, or markdown formatting. 
+The response must begin with '{' and end with '}'.
+
+
+
 Contract text:
 {contract_text}
 """
@@ -172,6 +178,7 @@ if 'extracted_dict' in st.session_state:
             st.success("CSA Form generated successfully!")
         except Exception as e:
             st.error(f"Error generating CSA form: {e}")
+
 
 
 
